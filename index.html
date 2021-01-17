@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Random Image Generator</title>
+</head>
+<body>
+  <h1>Refresh for a new User Image</h1>
+    <img src="" alt="me" id="random-image">
+    <script>
+    window.onload = choosePic;
+
+var images = new Array("https://randomuser.me/api/portraits/men/2.jpg", "https://randomuser.me/api/portraits/women/2.jpg", "https://randomuser.me/api/portraits/men/52.jpg", "https://randomuser.me/api/portraits/women/12.jpg", "https://randomuser.me/api/portraits/women/7.jpg", "https://randomuser.me/api/portraits/men/27.jpg", "https://randomuser.me/api/portraits/women/13.jpg", "https://randomuser.me/api/portraits/women/4.jpg", "https://randomuser.me/api/portraits/men/52.jpg", "https://randomuser.me/api/portraits/men/6.jpg", "https://randomuser.me/api/portraits/men/23.jpg", "https://randomuser.me/api/portraits/women/41.jpg", "https://randomuser.me/api/portraits/women/28.jpg");
+
+function choosePic(){
+    var randomNum = Math.floor(Math.random() * images.length);
+    document.getElementById("random-image").src = images[randomNum];
+}
+    </script>
+</body>
+</html>
